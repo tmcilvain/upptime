@@ -1,0 +1,69 @@
+/* Custom theme matching timmcilvain.com's palette/typography — overrides
+   Upptime's default theme variables (see themes/light.css in the built
+   site for the full variable set this replaces) plus a few structural
+   tweaks (fonts, radius, hiding the default footer credit line) that
+   aren't exposed as theme variables at all, added at the bottom via
+   plain selectors. Referenced via status-website.themeUrl in
+   .upptimerc.yml, not auto-discovered — Upptime's build doesn't copy
+   assets/ into the deployed site, so this loads from GitHub's raw
+   content URL instead. */
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("https://raw.githubusercontent.com/tmcilvain/upptime/master/assets/dm-sans-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("https://raw.githubusercontent.com/tmcilvain/upptime/master/assets/outfit-latin.woff2") format("woff2");
+}
+
+:root {
+  --body-background-color: #f7f8f9;
+  --body-text-color: #001f3f;
+  --card-background-color: #ffffff;
+  --nav-background-color: #ffffff;
+  --nav-border-bottom-color: #d8e7ef;
+  --nav-current-border-bottom-color: #fe5b2c;
+  --card-border-color: #d8e7ef;
+  --down-border-left-color: #c0392b;
+  --down-background-color: #fbeaea;
+  --degraded-border-left-color: #d9a400;
+  --up-border-left-color: #166b33;
+  --tag-color: #ffffff;
+  --tag-up-background-color: #166b33;
+  --tag-down-background-color: #c0392b;
+  --tag-degraded-background-color: #d9a400;
+  --change-background-color: #fe5b2c;
+  --error-button-border-color: #a8300a;
+  --error-button-background-color: #c43a0c;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #a8300a;
+  --submit-button-background-color: #c43a0c;
+  --submit-button-color: #ffffff;
+  --graph-opacity: 1;
+  --graph-filter: none;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+}
+article {
+  border-radius: 16px;
+}
+
+/* No configurable slot in .upptimerc.yml for the default footer, and it
+   carries nothing but the GitHub/Upptime credit line requested off — hide
+   it outright rather than leaving an empty bar. */
+footer.svelte-jbr799 {
+  display: none;
+}
