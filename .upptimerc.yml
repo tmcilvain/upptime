@@ -18,13 +18,15 @@ status-website:
   cname: status.mcilvain.app
   logoUrl: https://timmcilvain.com/assets/favicon.png
   name: Status
+  # Same navy/orange/Outfit+DM Sans identity as timmcilvain.com — see
+  # assets/theme.css. themeUrl has to be an absolute URL since Upptime's
+  # build doesn't copy assets/ into the deployed site.
+  themeUrl: https://raw.githubusercontent.com/tmcilvain/upptime/master/assets/theme.css
   introTitle: "**Status** — uptime for Tim McIlvain's sites."
-  introMessage: Live status and uptime history for timmcilvain.com and related personal sites. Powered by [Upptime](https://github.com/upptime/upptime) — GitHub Actions, Issues, and Pages, no server required.
+  introMessage: Live status and uptime history for timmcilvain.com and related personal sites.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
