@@ -9,8 +9,6 @@ sites:
     url: https://gracetutoring.com
   - name: Ron McIlvain
     url: https://ronmcilvain.com
-  - name: Northwestern Housing
-    url: https://nu-housing.timmcilvain.com
 
 status-website:
   # Custom domain — a subdomain, not the apex, so DNS just needs a single
