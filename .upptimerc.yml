@@ -13,8 +13,10 @@ sites:
     url: https://nu-housing.timmcilvain.com
 
 status-website:
-  # No custom domain configured — served at https://tmcilvain.github.io/upptime
-  baseUrl: /upptime
+  # Custom domain — DNS is on Porkbun, pointed at GitHub Pages' 4 A records.
+  # baseUrl is unset since the site is served at the domain's root, not a
+  # /upptime subpath, once the custom domain is live.
+  cname: mcilvain.app
   logoUrl: https://timmcilvain.com/assets/favicon.png
   name: Status
   introTitle: "**Status** — uptime for Tim McIlvain's sites."
